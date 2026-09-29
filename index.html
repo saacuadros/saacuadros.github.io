@@ -62,7 +62,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;width:10
 
 /* HERO */
 .hero{position:relative;padding:9.5rem 0 5rem;overflow:hidden}
-.hero-grid{max-width:760px}
+.hero-grid{max-width:860px}
 .badge{display:inline-flex;align-items:center;gap:.55rem;background:var(--card);border:1px solid var(--border2);border-radius:100px;padding:.35rem 1rem;font-size:.78rem;color:var(--text2);margin-bottom:1.6rem}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--green)}
 .hero-who{font-size:.95rem;color:var(--text2);margin-bottom:.8rem;font-weight:500}
@@ -142,6 +142,13 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;width:10
 .mini-media{background:#0b1120;padding:1.2rem;border-bottom:1px solid var(--border)}
 .mini-media img{border-radius:10px;cursor:zoom-in}
 .cel-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+
+/* appsheet phone strip */
+.appshots{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem;margin-top:1.3rem}
+.appshots figure{margin:0}
+.appshots img{width:100%;display:block;border-radius:12px;border:1px solid var(--border2);cursor:zoom-in;transition:.2s}
+.appshots img:hover{transform:translateY(-3px);border-color:rgba(91,156,246,.4)}
+.appshots figcaption{font-size:.68rem;color:var(--text3);text-align:center;margin-top:.5rem;line-height:1.35}
 .cel-grid img:first-child{grid-column:1/-1}
 .mini-body{padding:1.8rem 2rem 2rem;flex:1;display:flex;flex-direction:column}
 .mini h3{font-size:1.3rem;font-weight:700;margin-bottom:.6rem;letter-spacing:-.015em}
@@ -243,6 +250,7 @@ footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;font-
   .contact{padding:2.5rem 1.2rem}
   .logos{gap:.5rem 1.4rem}.logos span{font-size:.9rem}
   .case-num{font-size:3rem}
+  .appshots{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
@@ -252,8 +260,8 @@ footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;font-
   <div class="wrap">
     <a href="#top" class="logo"><span class="logo-mark">SA</span><span>Santiago Agudelo</span></a>
     <div class="nav-links">
-      <a href="#casos" data-en="Work">Casos</a>
       <a href="#servicios" data-en="Services">Servicios</a>
+      <a href="#casos" data-en="Work">Casos</a>
       <a href="#trayectoria" data-en="Experience">Trayectoria</a>
     </div>
     <div class="nav-ctl">
@@ -270,7 +278,7 @@ footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;font-
     <div>
       <span class="badge"><span class="dot"></span><span data-en="Available for projects and IT leadership roles">Disponible para proyectos y roles de liderazgo TI</span></span>
       <p class="hero-who" data-en="<b>Santiago Agudelo Cuadros</b> · Electronic Engineer &amp; MBA"><b>Santiago Agudelo Cuadros</b> · Ingeniero Electrónico y MBA</p>
-      <h1 data-en="I turn slow processes into <span class='grad'>AI-powered tools</span> people actually use.">Convierto procesos lentos en <span class="grad">herramientas con IA</span> que la gente sí usa.</h1>
+      <h1 data-en="Your ally for <span class='grad'>innovation.</span> Over 20 years building the bridge between technology and business.">Su aliado para <span class="grad">innovar.</span> Más de 20 años construyendo el puente entre tecnología y negocio.</h1>
       <p class="hero-sub" data-en="20+ years bridging technology and business: AI agents, custom apps, data and SAP Business One — for construction, distribution and service companies in Colombia.">Más de 20 años uniendo tecnología y negocio: agentes de IA, apps a la medida, datos y ERP SAP Business One — para empresas de construcción, distribución y servicios en Colombia.</p>
       <div class="actions">
         <a href="#casos" class="btn btn-p"><span data-en="See real cases">Ver casos reales</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></a>
@@ -283,8 +291,7 @@ footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;font-
       </div>
       <div class="hero-stats">
         <div><p class="sn">20<span>+</span></p><p class="sl" data-en="Years of experience">Años de experiencia</p></div>
-        <div><p class="sn">5<span>+</span></p><p class="sl" data-en="Applied AI projects">Proyectos de IA aplicada</p></div>
-        <div><p class="sn">2</p><p class="sl" data-en="Companies served">Empresas atendidas</p></div>
+        <div><p class="sn">5<span>+</span></p><p class="sl" data-en="AI projects applied and implemented in companies">Proyectos de IA aplicada e implementación en empresas</p></div>
       </div>
     </div>
   </div>
@@ -302,6 +309,31 @@ footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;font-
 
 <!-- IMPACT -->
 <!-- CASES -->
+<section id="servicios">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow" data-en="Services">Servicios</p>
+      <h2 class="h2" data-en="How I can help your company">Cómo puedo ayudar a su empresa</h2>
+      <p class="lead" data-en="Strategic vision and hands-on execution: I design the solution, build it and make sure your team adopts it.">Visión estratégica y ejecución en la misma persona: diseño la solución, la construyo y me aseguro de que su equipo la adopte.</p>
+    </div>
+    <div class="svc-grid rv">
+      <div class="svc"><div class="ic" style="background:rgba(52,211,153,.12);color:var(--green)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V4M8 4h8"/><circle cx="9" cy="14" r="1.2"/><circle cx="15" cy="14" r="1.2"/></svg></div>
+        <h3 data-en="AI agents for your business">Agentes de IA para su negocio</h3><p data-en="Assistants trained on your company's knowledge: quoting, customer service, internal queries. The expertise of your best people, available to everyone.">Asistentes entrenados con el conocimiento de su empresa: cotizar, atender clientes, resolver consultas internas. El saber de sus mejores personas, disponible para todos.</p></div>
+      <div class="svc"><div class="ic" style="background:rgba(91,156,246,.12);color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="13" height="10" rx="2"/><rect x="15" y="9" width="6" height="11" rx="1.5"/><path d="M7 18h5"/></svg></div>
+        <h3 data-en="Custom apps and tools">Apps y herramientas a la medida</h3><p data-en="Web apps, AppSheet and PWAs that digitize field and office work — quotes, visits, inventory, approvals — without huge budgets.">Apps web, AppSheet y PWAs que digitalizan el trabajo de campo y oficina — cotizaciones, visitas, inventario, aprobaciones — sin presupuestos gigantes.</p></div>
+      <div class="svc"><div class="ic" style="background:rgba(167,139,250,.12);color:var(--accent2)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
+        <h3 data-en="Data, BI and forecasting">Datos, BI y predicción</h3><p data-en="Power BI dashboards, automated reports with Python and SQL, and machine-learning models to forecast demand.">Tableros en Power BI, informes automáticos con Python y SQL, y modelos de machine learning para predecir demanda.</p></div>
+      <div class="svc"><div class="ic" style="background:rgba(245,184,61,.12);color:var(--amber)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M20 12c0 1.66-3.58 3-8 3s-8-1.34-8-3"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/></svg></div>
+        <h3>ERP SAP Business One</h3><p data-en="Implementation, cloud migration, reports and optimization. 15+ years running SAP B1 in real operations.">Implementación, migración a la nube, informes y optimización. Más de 15 años operando SAP B1 en empresas reales.</p></div>
+      <div class="svc"><div class="ic" style="background:rgba(91,156,246,.12);color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="4" rx="1"/><rect x="3" y="11" width="11" height="4" rx="1"/><path d="M17 14l2 2 3-4"/><path d="M3 20h11"/></svg></div>
+        <h3 data-en="IT and project leadership">Dirección de TI y proyectos</h3><p data-en="Infrastructure, vendors, security and technology projects end to end with agile methods (Scrum SFPC).">Infraestructura, proveedores, seguridad y proyectos tecnológicos de punta a punta con metodologías ágiles (Scrum SFPC).</p></div>
+      <div class="svc"><div class="ic" style="background:rgba(167,139,250,.12);color:var(--accent2)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8l10-5 10 5-10 5z"/><path d="M6 10v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg></div>
+        <h3 data-en="AI training for teams">Capacitación en IA para equipos</h3><p data-en="Hands-on workshops so your team uses AI in its daily work. AI instructor for the MinTIC TalentoTech program.">Talleres prácticos para que su equipo use IA en el trabajo diario. Docente de IA del programa TalentoTech del MinTIC.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
 <section id="casos" style="padding-top:1rem">
   <div class="wrap">
     <div class="head rv">
@@ -382,13 +414,19 @@ footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;font-
           <div class="flow-step"><span class="fi" style="background:rgba(245,184,61,.14)">🧾</span><div><h4 data-en="Order in SAP">Pedido en SAP</h4><p data-en="The order is entered in SAP Business One.">El pedido se monta en SAP Business One.</p></div><span class="st" data-en="Integrated">Integrado</span></div>
           <div class="flow-step"><span class="fi" style="background:rgba(52,211,153,.14)">✅</span><div><h4 data-en="Customer confirmation">Confirmación al cliente</h4><p data-en="The customer gets the confirmation without anyone writing it.">El cliente recibe la confirmación sin que nadie la escriba.</p></div><span class="st" data-en="Automatic">Automático</span></div>
         </div>
+        <div class="appshots">
+          <figure><img src="img/app2.jpg" alt="App AppSheet: lista de pendientes de visitas" data-lb="appsheet" data-cap="App AppSheet: lista de visitas pendientes por fecha"><figcaption data-en="Pending visits list">Lista de pendientes</figcaption></figure>
+          <figure><img src="img/app4.jpg" alt="App AppSheet: registro de visita" data-lb="appsheet" data-cap="Registro de visita: obra, oficina o sala de ventas, ubicación, fecha y vendedor"><figcaption data-en="Log a visit">Registrar visita</figcaption></figure>
+          <figure><img src="img/app1.jpg" alt="App AppSheet: crear actividad" data-lb="appsheet" data-cap="Crear actividad: tarea, reunión virtual, visita en oficina o en obra"><figcaption data-en="Create activity">Crear actividad</figcaption></figure>
+          <figure><img src="img/app3.jpg" alt="App AppSheet: menú de Registro Visitas" data-lb="appsheet" data-cap="Menú de la app: lista pendientes, asignación de tareas, directorio, visitas realizadas"><figcaption data-en="Menu">Menú</figcaption></figure>
+        </div>
+        <p class="cap" data-en="Field app built with AppSheet, used daily by the sales team">App de campo construida con AppSheet, usada a diario por el equipo comercial</p>
       </div>
     </article>
 
     <!-- MINIS -->
     <div class="minis">
       <article class="mini rv">
-        <div class="mini-media"><img src="img/calimia.jpg" alt="App CalimIA — pantallas principales" data-lb="calimia" data-cap="CalimIA — guía turística con IA para Cali"></div>
         <div class="mini-body">
           <span class="tag win" data-en="🏆 Winner · Hackathon · TalentoTech 2026">🏆 Ganador · Hackathon · TalentoTech 2026</span>
           <h3 data-en="CalimIA — AI tourism app for Cali">CalimIA — turismo con IA para Cali</h3>
@@ -396,8 +434,15 @@ footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;font-
           <div class="res-box" data-en="<b>Winners</b> — final round among cohort champions, May 2026."><b>Ganadores</b> — ronda final entre campeones de cohortes, mayo 2026.</div>
           <a href="https://ois-seven.vercel.app" target="_blank" rel="noopener" class="btn btn-p"><span data-en="Try the app">Probar la app</span> →</a>
         </div>
+        <div class="mini-media"><img src="img/calimia.jpg" alt="App CalimIA — pantallas principales" data-lb="calimia" data-cap="CalimIA — guía turística con IA para Cali"></div>
       </article>
       <article class="mini rv">
+        <div class="mini-body">
+          <span class="tag" data-en="Computer vision · DYETRON · 2002–2010">Visión artificial · DYETRON · 2002–2010</span>
+          <h3 data-en="CELESTINO — license plate recognition">CELESTINO — reconocimiento de placas</h3>
+          <p class="d" data-en="Automatic license-plate recognition with computer vision, deployed at national toll booths in Colombia — AI in production long before it was trendy.">Reconocimiento automático de placas vehiculares con visión artificial, desplegado en peajes nacionales de Colombia — IA en producción mucho antes de que estuviera de moda.</p>
+          <div class="res-box" data-en="<b>Impact:</b> deployed at national toll booths. Published in Revista Epiciclos, U. Javeriana."><b>Impacto:</b> implementado en peajes nacionales. Publicado en la Revista Epiciclos, U. Javeriana.</div>
+        </div>
         <div class="mini-media">
           <div class="cel-grid">
             <img src="img/cel1.jpg" alt="CELESTINO: placa reconocida con datos del vehículo" data-lb="cel" data-cap="CELESTINO — placa reconocida con datos del vehículo">
@@ -405,43 +450,12 @@ footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;font-
             <img src="img/cel3.jpg" alt="CELESTINO: reconocimiento nocturno" data-lb="cel" data-cap="Reconocimiento nocturno">
           </div>
         </div>
-        <div class="mini-body">
-          <span class="tag" data-en="Computer vision · DYETRON · 2002–2010">Visión artificial · DYETRON · 2002–2010</span>
-          <h3 data-en="CELESTINO — license plate recognition">CELESTINO — reconocimiento de placas</h3>
-          <p class="d" data-en="Automatic license-plate recognition with computer vision, deployed at national toll booths in Colombia — AI in production long before it was trendy.">Reconocimiento automático de placas vehiculares con visión artificial, desplegado en peajes nacionales de Colombia — IA en producción mucho antes de que estuviera de moda.</p>
-          <div class="res-box" data-en="<b>Impact:</b> deployed at national toll booths. Published in Revista Epiciclos, U. Javeriana."><b>Impacto:</b> implementado en peajes nacionales. Publicado en la Revista Epiciclos, U. Javeriana.</div>
-        </div>
       </article>
     </div>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section id="servicios">
-  <div class="wrap">
-    <div class="head rv">
-      <p class="eyebrow" data-en="Services">Servicios</p>
-      <h2 class="h2" data-en="How I can help your company">Cómo puedo ayudar a su empresa</h2>
-      <p class="lead" data-en="Strategic vision and hands-on execution: I design the solution, build it and make sure your team adopts it.">Visión estratégica y ejecución en la misma persona: diseño la solución, la construyo y me aseguro de que su equipo la adopte.</p>
-    </div>
-    <div class="svc-grid rv">
-      <div class="svc"><div class="ic" style="background:rgba(52,211,153,.12);color:var(--green)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V4M8 4h8"/><circle cx="9" cy="14" r="1.2"/><circle cx="15" cy="14" r="1.2"/></svg></div>
-        <h3 data-en="AI agents for your business">Agentes de IA para su negocio</h3><p data-en="Assistants trained on your company's knowledge: quoting, customer service, internal queries. The expertise of your best people, available to everyone.">Asistentes entrenados con el conocimiento de su empresa: cotizar, atender clientes, resolver consultas internas. El saber de sus mejores personas, disponible para todos.</p></div>
-      <div class="svc"><div class="ic" style="background:rgba(91,156,246,.12);color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="13" height="10" rx="2"/><rect x="15" y="9" width="6" height="11" rx="1.5"/><path d="M7 18h5"/></svg></div>
-        <h3 data-en="Custom apps and tools">Apps y herramientas a la medida</h3><p data-en="Web apps, AppSheet and PWAs that digitize field and office work — quotes, visits, inventory, approvals — without huge budgets.">Apps web, AppSheet y PWAs que digitalizan el trabajo de campo y oficina — cotizaciones, visitas, inventario, aprobaciones — sin presupuestos gigantes.</p></div>
-      <div class="svc"><div class="ic" style="background:rgba(167,139,250,.12);color:var(--accent2)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
-        <h3 data-en="Data, BI and forecasting">Datos, BI y predicción</h3><p data-en="Power BI dashboards, automated reports with Python and SQL, and machine-learning models to forecast demand.">Tableros en Power BI, informes automáticos con Python y SQL, y modelos de machine learning para predecir demanda.</p></div>
-      <div class="svc"><div class="ic" style="background:rgba(245,184,61,.12);color:var(--amber)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M20 12c0 1.66-3.58 3-8 3s-8-1.34-8-3"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/></svg></div>
-        <h3>ERP SAP Business One</h3><p data-en="Implementation, cloud migration, reports and optimization. 15+ years running SAP B1 in real operations.">Implementación, migración a la nube, informes y optimización. Más de 15 años operando SAP B1 en empresas reales.</p></div>
-      <div class="svc"><div class="ic" style="background:rgba(91,156,246,.12);color:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="4" rx="1"/><rect x="3" y="11" width="11" height="4" rx="1"/><path d="M17 14l2 2 3-4"/><path d="M3 20h11"/></svg></div>
-        <h3 data-en="IT and project leadership">Dirección de TI y proyectos</h3><p data-en="Infrastructure, vendors, security and technology projects end to end with agile methods (Scrum SFPC).">Infraestructura, proveedores, seguridad y proyectos tecnológicos de punta a punta con metodologías ágiles (Scrum SFPC).</p></div>
-      <div class="svc"><div class="ic" style="background:rgba(167,139,250,.12);color:var(--accent2)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8l10-5 10 5-10 5z"/><path d="M6 10v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg></div>
-        <h3 data-en="AI training for teams">Capacitación en IA para equipos</h3><p data-en="Hands-on workshops so your team uses AI in its daily work. AI instructor for the MinTIC TalentoTech program.">Talleres prácticos para que su equipo use IA en el trabajo diario. Docente de IA del programa TalentoTech del MinTIC.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
 <section id="proceso" style="padding-top:1rem">
   <div class="wrap">
     <div class="head rv">
