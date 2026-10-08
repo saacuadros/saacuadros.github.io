@@ -105,7 +105,7 @@ body[data-theme="light"] .theme-btn .ic-moon{display:block}
 .head{margin-bottom:3.2rem}
 
 /* CASES */
-.case{display:grid;grid-template-columns:1fr;gap:1.8rem;padding:2.6rem;background:var(--card);border:1px solid var(--border);border-radius:20px;margin-bottom:2rem;box-shadow:var(--shadow);position:relative}
+.case{display:grid;grid-template-columns:minmax(0,1fr);gap:1.8rem;padding:2.6rem;background:var(--card);border:1px solid var(--border);border-radius:20px;margin-bottom:2rem;box-shadow:var(--shadow);position:relative}
 .case-num{position:absolute;top:1.4rem;right:1.8rem;font-family:'Syne';font-size:3.2rem;font-weight:800;color:var(--text);opacity:.05;line-height:1}
 .case > div:first-child{max-width:760px}
 .tag{display:inline-flex;align-items:center;gap:.4rem;font-size:.7rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);background:rgba(91,156,246,.1);border:1px solid rgba(91,156,246,.22);padding:.3rem .7rem;border-radius:100px;margin-bottom:1rem}
@@ -136,6 +136,8 @@ body[data-theme="light"] .theme-btn .ic-moon{display:block}
 .flow-step{display:flex;gap:1rem;align-items:center;background:var(--card);border:1px solid var(--border2);border-radius:12px;padding:1rem 1.1rem;position:relative}
 .flow-step:not(:last-child)::after{content:'';position:absolute;left:34px;bottom:-.78rem;width:2px;height:.78rem;background:linear-gradient(var(--accent),var(--accent2))}
 .fi{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-size:1.15rem;flex-shrink:0}
+.case > *{min-width:0}
+.flow-step > div{min-width:0;flex:1 1 0}
 .flow-step h4{font-size:.9rem;font-weight:600;margin-bottom:.1rem}
 .flow-step p{font-size:.78rem;color:var(--text2);font-weight:300;line-height:1.45}
 .flow-step .st{margin-left:auto;font-size:.65rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--green);white-space:nowrap}
@@ -256,6 +258,20 @@ footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;font-
   .logos{gap:.5rem 1.4rem}.logos span{font-size:.9rem}
   .case-num{font-size:3rem}
   .appshots{grid-template-columns:1fr 1fr}
+  .logo{font-size:.88rem;white-space:nowrap;gap:.5rem;min-width:0}
+  .logo span:last-child{overflow:hidden;text-overflow:ellipsis}
+  .logo-mark{flex-shrink:0}
+  .nav-ctl{flex-shrink:0}
+  nav .wrap{gap:.5rem}
+  .nav-ctl{gap:.35rem}
+  .flow{padding:.6rem;gap:.55rem}
+  .flow-step{align-items:flex-start;gap:.75rem;padding:.8rem}
+  .fi{width:34px;height:34px;font-size:1rem}
+  .flow-step:not(:last-child)::after{left:29px}
+  .cap{letter-spacing:.03em}
+}
+@media (max-width:400px){
+  .logo{font-size:.8rem}
 }
 </style>
 </head>
@@ -433,10 +449,10 @@ footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;font-
       </div>
       <div class="case-media" id="eco-media">
         <div class="flow">
-          <div class="flow-step"><span class="fi" style="background:rgba(91,156,246,.14)">📍</span><div><h4 data-en="Field visit">Visita en campo</h4><p data-en="The rep logs the visit from the phone (AppSheet), with pending activities, agenda, a directory of every site contact and geolocated tracking of sites in progress and sites still to visit.">El asesor registra la visita desde el celular (AppSheet), con sus actividades pendientes a la mano, el manejo de su agenda, el directorio de todos los interlocutores de las obras y un control geolocalizado de las obras en curso y las pendientes por atender.</p></div><span class="st" data-en="Automatic">Automático</span></div>
-          <div class="flow-step"><span class="fi" style="background:rgba(167,139,250,.14)">📊</span><div><h4 data-en="Weekly report">Informe semanal</h4><p data-en="Visits, sales and budget per rep, sent automatically to management and to each rep (Apps Script).">Visitas, ventas y presupuesto por asesor, enviado automáticamente tanto a gerencia como a cada asesor (Apps Script).</p></div><span class="st" data-en="Automatic">Automático</span></div>
-          <div class="flow-step"><span class="fi" style="background:rgba(245,184,61,.14)">🧾</span><div><h4 data-en="Order in SAP">Pedido en SAP</h4><p data-en="The order is entered in SAP Business One, supported by the AI quoting agent that also handles placing the order.">El pedido se monta en SAP Business One, apoyado en el agente cotizador con IA que también permite el montaje del pedido.</p></div><span class="st" data-en="Integrated">Integrado</span></div>
-          <div class="flow-step"><span class="fi" style="background:rgba(52,211,153,.14)">✅</span><div><h4 data-en="Customer confirmation">Confirmación al cliente</h4><p data-en="The customer gets confirmation that the order was processed without anyone writing it, and can review it to flag any error or field issue that needs solving.">El cliente recibe la confirmación de que su pedido fue tramitado sin que nadie la tenga que escribir, y puede revisarla para informar cualquier error o novedad de campo que haya que solucionar.</p></div><span class="st" data-en="Automatic">Automático</span></div>
+          <div class="flow-step"><span class="fi" style="background:rgba(91,156,246,.14)">📍</span><div><h4 data-en="Field visit">Visita en campo</h4><p data-en="The rep logs the visit from the phone (AppSheet), with pending activities, agenda, a directory of every site contact and geolocated tracking of sites in progress and sites still to visit.">El asesor registra la visita desde el celular (AppSheet), con sus actividades pendientes a la mano, el manejo de su agenda, el directorio de todos los interlocutores de las obras y un control geolocalizado de las obras en curso y las pendientes por atender.</p></div></div>
+          <div class="flow-step"><span class="fi" style="background:rgba(167,139,250,.14)">📊</span><div><h4 data-en="Weekly report">Informe semanal</h4><p data-en="Visits, sales and budget per rep, sent automatically to management and to each rep (Apps Script).">Visitas, ventas y presupuesto por asesor, enviado automáticamente tanto a gerencia como a cada asesor (Apps Script).</p></div></div>
+          <div class="flow-step"><span class="fi" style="background:rgba(245,184,61,.14)">🧾</span><div><h4 data-en="Order in SAP">Pedido en SAP</h4><p data-en="The order is entered in SAP Business One, supported by the AI quoting agent that also handles placing the order.">El pedido se monta en SAP Business One, apoyado en el agente cotizador con IA que también permite el montaje del pedido.</p></div></div>
+          <div class="flow-step"><span class="fi" style="background:rgba(52,211,153,.14)">✅</span><div><h4 data-en="Customer confirmation">Confirmación al cliente</h4><p data-en="The customer gets confirmation that the order was processed without anyone writing it, and can review it to flag any error or field issue that needs solving.">El cliente recibe la confirmación de que su pedido fue tramitado sin que nadie la tenga que escribir, y puede revisarla para informar cualquier error o novedad de campo que haya que solucionar.</p></div></div>
         </div>
         <div class="appshots">
           <figure><img src="img/app2.jpg" alt="App AppSheet: lista de pendientes de visitas" data-lb="appsheet" data-cap="App AppSheet: lista de visitas pendientes por fecha"><figcaption data-en="Pending visits list">Lista de pendientes</figcaption></figure>
